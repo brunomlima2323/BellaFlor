@@ -1,0 +1,146 @@
+@import "bootstrap";
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+@media screen and (min-width: 300px){
+  .fundo{
+    background-image: url(fundo4.jpg);
+  }
+
+  #head{
+    background: #ff99c2;
+    height: 160px;
+  }
+
+  .menu{
+    background: #ff99c2;
+    text-align: center;
+  }
+
+  .menu h3{
+    display: inline;
+    padding: 4px;
+  }
+
+  .menu h3 a{
+    color: black;
+  }
+
+  .menu h3 a:hover{
+    background: black;
+    color: #FFFFFF;
+  }
+
+  .menu h3#selecionado{
+    background: #FFFFFF;;
+  }
+
+  #filtro-categoria{
+    width: 100%;
+    background: #ff99c2;
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .logo_head{
+    padding-top: 6%;
+    font-size: 60px;
+  }
+
+  .links_head{
+    padding-top: 4%;
+    display: inline;
+    width: 30%;
+    float: right;
+  }
+
+  .body_index{
+    padding: 8px 8px 10px 15px;
+    background-color: #FFFFFF;
+    border: 1px solid black;
+    opacity: 0.9;
+    filter: alpha(opacity=60);
+    width: 95%;
+    height: 2000px;
+    margin-left: 1em;
+  }
+
+  .card{
+    float: left;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .fundo{
+    background-image: url(fundo4.jpg);
+  }
+
+  #head{
+    background: #ff99c2;
+    height: 60px;
+  }
+
+  #filtro-categoria{
+    font-size: 20px;
+  }
+
+  .logo_head{
+    padding-top: 2%;
+    font-size: 40px;
+  }
+
+  .links_head{
+    padding-top: 2.5%;
+    display: inline;
+    width: 30%;
+    float: right;
+  }
+
+  .body_index{
+    padding: auto;
+    background-color: #FFFFFF;
+    border: 1px solid black;
+    opacity: 0.9;
+    filter: alpha(opacity=60);
+    width: 80%;
+    height: 100em;
+    margin-left: 6em;
+  }
+
+  .card{
+    float: left;
+    margin-left: 55px;
+  }
+
+  .lista-dados table{
+    text-align: center;
+    width: 100%
+  }
+
+  // .lista-dados div{
+  //   margin: 0 25%;
+  // }
+
+  .lista-dados th{
+    background: #ff99c2;
+    border: 1px solid #FFFFFF;
+  }
+
+  .lista-dados td{
+    background: black;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+  }
+
+}

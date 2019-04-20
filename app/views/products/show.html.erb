@@ -1,0 +1,45 @@
+<%= render "layouts/head" %>
+<div class="menu">
+  <div>
+    <h3><%= link_to 'Home', root_path %></h3> |
+    <h3><%= link_to 'Produtos', products_path %></h3> |
+    <h3><%= link_to 'Categorias', categories_path %></h3> |
+    <h3><%= link_to 'Tamanhos', sizes_path %></h3>
+  </div>
+</div>
+<div class="body_index">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Name:</strong>
+    <%= @product.name %>
+  </p>
+
+  <p>
+    <strong>Price:</strong>
+    <%= @product.price %>
+  </p>
+
+  <p>
+    <strong>Quantity:</strong>
+    <%= @product.quantity %>
+  </p>
+
+  <p>
+    <strong>Category:</strong>
+    <%= @product.category.name %>
+  </p>
+
+  <p>
+    <strong>Size:</strong>
+    <%= @product.size.name %>
+  </p>
+
+  <p>
+    <strong>Url image:</strong>
+    <%= image_tag(@product.url_image, size: '600x600') %>
+  </p>
+
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', products_path %>
+</div>

@@ -1,0 +1,35 @@
+<%= render "layouts/head" %>
+<div class="menu">
+  <div>
+    <h3 id="selecionado"><%= link_to 'Home', root_path %></h3> |
+    <h3><%= link_to 'Produtos', products_path %></h3> |
+    <h3><%= link_to 'Categorias', categories_path %></h3> |
+    <h3><%= link_to 'Tamanhos', sizes_path %></h3>
+  </div>
+</div>
+<div class="body_index">
+  <div id="filtro-categoria">
+    <label>Selecione uma categoria</label>
+    <select>
+      <option value="">Lançamentos</option>
+      <%@categories.each do |category|%>
+        <option value="<%=category.id%>"><%=category.name%></option>
+      <%end%>
+    </select>
+  </div>
+  <h1 style="text-align: center;">Lançamentos</h1>
+    <% @products.each do |product| %>
+      <div class="card" style="width: 18rem;">
+        <!-- <img src="..." class="card-img-top" alt="..."> -->
+        <div class="card-body">
+          <%= image_tag(product.url_image, size: '200x200') %>
+          <h5 class="card-title"><%= product.name %></h5>
+          <p class="card-text"><b>Valor: </b> <%= product.price %></p>
+          <p class="card-text"><b>Quantidade: </b> <%= product.quantity %></p>
+          <p class="card-text"><b>Categoria: </b><%= product.category.name %></p>
+          <p class="card-text"><b>Tamanho: </b><%= product.size.name %></p>
+          <%= link_to 'Ver mais detalhes', product, class: 'btn btn-primary'%>
+        </div>
+      </div>
+    <%end%>
+</div>

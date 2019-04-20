@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BellaFlorStoreRails</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <div class="container-fluid" id="head">
+      <h3 class="logo_head">Bella Flor Store</h3>
+    </div>
+
+  </head>
+
+  <body class="fundo">
+    <%= yield %>
+  </body>
+</html>
